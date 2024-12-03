@@ -29,4 +29,9 @@ class index11(TemplateView):   # объектное представлениме
     template_name = 'second_task/index11.html'
 
 def index22(request):                                       #
-    return render(request, 'second_task/index22.html')    #
+    title='my title /// '
+    text='мой текст'
+    context={'title': title,
+             'text':text,
+             }
+    return render(request, 'second_task/index22.html', context)    #

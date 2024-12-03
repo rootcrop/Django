@@ -8,6 +8,37 @@
     Это шаблон для классового представления <br>
 	INSTALLED_APPS // task2 <br>
 	templates // second_task <br>
-	index11.html
+	index11.html <br>
+    <br>
+	Таблица основных тегов html с примерами <br>
+    <a href="https://uguide.ru/tablica-osnovnykh-tegov-html-s-primerami">tablica-osnovnykh-tegov-html-s-primerami</a>
+    <br>
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <button> button </button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur feugiat neque, quis suscipit risus bibendum eu. Suspendisse scelerisque quis mi sed dignissim. Aenean eget aliquam nibh. Nunc laoreet a ipsum sed semper. Nulla id rhoncus magna. Sed purus ante, vulputate sed semper ut, sodales in velit. In gravida tincidunt laoreet. Sed ornare dapibus quam a convallis. Aliquam volutpat orci ac justo tincidunt lacinia. Nulla sodales ultrices dignissim. Fusce lacinia quam vitae iaculis sollicitudin. Proin commodo elementum placerat. In pretium at justo volutpat tincidunt. Nam turpis arcu, finibus id lectus vitae, finibus hendrerit odio. Curabitur efficitur scelerisque est, in lacinia nulla rhoncus vel. Donec et porta est. </p>
+    <p>Phasellus venenatis nibh at neque imperdiet, a tempus felis sodales. Duis eleifend quam nisi, et pretium massa auctor et. Curabitur id ligula ac urna egestas ultricies. Nunc orci augue, mattis faucibus nibh vel, gravida lacinia tortor. Mauris gravida, lectus ac consequat pellentesque, ex arcu congue eros, sit amet placerat neque lacus quis arcu. Integer congue purus in erat viverra, ac tincidunt odio vestibulum. Quisque a lectus non nibh tincidunt hendrerit et quis odio. </p>
+    <br>
+    <a href="https://uguide.ru/tablica-osnovnykh-tegov-html-s-primerami"> href to html </a>
+    <ul>
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+    </ul>
+
+    <p>чтобы выводить динамическую информацию редактируем файл проекта : <br>
+        UrbanDjango // task2 // <b>views.py</b> // нужный шаблон (index22.html) <br> <br>
+views.py :
+def index22(request): <br>
+_ _ _ _ _ _ _ _ title='my title' <br>
+_ _ _ _ _ _ _ _ context={'title': title,} <br>
+_ _ _ _ _ _ _ _ return render(request, 'second_task/index22.html', context) <br>
+<br><br>
+index22.html<br>
+< title > { { title } } шаблон 22 < / title >
+</p>
+<br><br><br>
+
 </body>
 </html>

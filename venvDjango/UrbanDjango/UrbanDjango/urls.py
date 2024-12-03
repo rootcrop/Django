@@ -20,12 +20,20 @@ from django.views.generic import TemplateView   #3 способ: из views им
 from task2.views import index11
 from task2.views import index22
 
+from task3.views import index00 # главная страница // заглушка
+from task3.views import index01 # магазин
+from task3.views import index02
+from task3.views import index03
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index11.as_view() ),   # '' пустое место означает по умолчанию, т.е. главная страница
+    path('', index00.as_view(template_name='third_task/index00.html')),    # главная страница // заглушка
+    path('platform', index01.as_view() ),                       # домашняя страница магазина
+    path('shop', index02),
+    path('basket', index03.as_view()),
+    path('1', index11.as_view() ),   # '' пустое место означает по умолчанию, т.е. главная страница
     path('2', index22 ),
     path('3', index),               # index это функция, которую нужно импортировать
     path('4', index2.as_view()),  # это уже не функция, а класс, поэтому нужен метод as_view
     path('5', TemplateView.as_view(template_name='index3.html')),   # способ без views.py, с созданием объекта сразу тут
-
 ]
